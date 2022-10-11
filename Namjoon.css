@@ -1,0 +1,102 @@
+body {
+    background-image: url(/Sleep.jpg);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 20px;
+}
+
+.top {
+    font-family: La Belle Aurore, cursive;
+    font-size: 30px;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.bottom {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.kanan {
+    position: fixed;
+    font-family: 'Tangerine', cursive;
+    top: 50%;
+    left: 75%;
+    font-size: 35px;
+}
+.right {
+    position: fixed;
+    top: 70%;
+    left: 80%;
+    font-family: 'Tangerine', cursive;
+    font-size: 35px;
+}
+.back {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 80%;
+    left: 85%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation-name: backdiv;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+  }
+
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 85%;
+    left: 85%;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+  }
+  .heart:after {
+    background-color: red;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart:before {
+    background-color: red;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  @keyframes backdiv {
+    50% {
+      background: #ffe6f2;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+.heart:hover {
+    animation-iteration-count: infinite;
+}
+footer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: fixed;
+    left: 3%;
+    top: 95%;
+}
